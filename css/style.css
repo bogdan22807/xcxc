@@ -1650,6 +1650,7 @@ fieldset {
   position: relative;
   z-index: 1;
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
   margin-bottom: 2rem;
 }
@@ -1692,9 +1693,10 @@ fieldset {
 }
 
 .contact-method__value {
-  font-size: 1rem;
+  font-size: 0.9375rem;
   font-weight: 700;
   color: var(--text);
+  overflow-wrap: anywhere;
 }
 
 .contacts__actions {
@@ -1737,12 +1739,6 @@ fieldset {
 @media (max-width: 600px) {
   .contacts__watermark {
     display: none;
-  }
-}
-
-@media (min-width: 640px) {
-  .contacts__methods {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 
