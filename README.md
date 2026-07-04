@@ -18,3 +18,9 @@ python3 -m http.server 8080
 ```
 
 Then visit [http://localhost:8080](http://localhost:8080).
+
+## Live site
+
+After merging to `main`, GitHub Actions deploys automatically to:
+
+**https://bogdan22807.github.io/xcxc/**
