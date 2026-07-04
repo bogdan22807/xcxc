@@ -204,56 +204,48 @@
     <!-- BLOCK 4: PAYMENT & TOOLS -->
     <section class="info-cards" id="tools">
       <div class="container info-cards__grid">
-        <article class="info-card info-card--pay">
-          <div class="info-card__glow" aria-hidden="true"></div>
+        <article class="info-card">
           <h3 class="info-card__title">Оплата</h3>
-          <div class="pay-layout">
-            <div class="pay-donut" aria-hidden="true">
-              <div class="pay-donut__hole">
-                <span class="pay-donut__value">50/50</span>
-                <small class="pay-donut__cap">прозоро</small>
+          <div class="pay-bar" aria-hidden="true">
+            <span class="pay-bar__start">50%</span>
+            <span class="pay-bar__end">50%</span>
+          </div>
+          <div class="info-card__rows">
+            <div class="info-card__row">
+              <span class="info-card__dot info-card__dot--yellow" aria-hidden="true"></span>
+              <div>
+                <strong class="info-card__row-title">Передоплата — 50%</strong>
+                <p>Перед початком роботи</p>
               </div>
-              <span class="pay-donut__tag pay-donut__tag--yellow">Старт</span>
-              <span class="pay-donut__tag pay-donut__tag--blue">Фініш</span>
             </div>
-            <div class="info-card__rows">
-              <div class="info-card__row">
-                <span class="info-card__percent">50%</span>
-                <p>Передоплата перед початком роботи</p>
-              </div>
-              <div class="info-card__row info-card__row--blue">
-                <span class="info-card__percent">50%</span>
-                <p>Оплата після завершення розробки сайту перед передачею проєкту</p>
+            <div class="info-card__row">
+              <span class="info-card__dot info-card__dot--blue" aria-hidden="true"></span>
+              <div>
+                <strong class="info-card__row-title">Оплата після завершення — 50%</strong>
+                <p>Розробки сайту, перед передачею проєкту</p>
               </div>
             </div>
           </div>
           <a class="link-arrow" href="#quiz">Отримати консультацію</a>
         </article>
-        <article class="info-card info-card--tools">
-          <div class="info-card__glow" aria-hidden="true"></div>
+
+        <article class="info-card">
           <h3 class="info-card__title">Інструменти</h3>
-          <ul class="tech-stack">
-            <li>
-              <span class="tech-stack__name">Python</span>
-              <span class="tech-stack__bar"><i style="--w:92%"></i></span>
-            </li>
-            <li>
-              <span class="tech-stack__name">JavaScript</span>
-              <span class="tech-stack__bar"><i style="--w:88%"></i></span>
-            </li>
-            <li>
-              <span class="tech-stack__name">MySQL</span>
-              <span class="tech-stack__bar tech-stack__bar--blue"><i style="--w:82%"></i></span>
-            </li>
-            <li>
-              <span class="tech-stack__name">PHP</span>
-              <span class="tech-stack__bar tech-stack__bar--blue"><i style="--w:78%"></i></span>
-            </li>
-          </ul>
-          <p class="info-card__note">
-            <span class="info-card__git" aria-hidden="true">⎇</span>
-            Платформи та контроль: <strong>GitHub</strong>
-          </p>
+          <div class="tool-group">
+            <p class="tool-group__label">Мови та бази даних</p>
+            <div class="tool-tags">
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">JavaScript</span>
+              <span class="tool-tag">MySQL</span>
+              <span class="tool-tag">PHP</span>
+            </div>
+          </div>
+          <div class="tool-group">
+            <p class="tool-group__label">Платформи та контроль</p>
+            <div class="tool-tags">
+              <span class="tool-tag tool-tag--git">GitHub</span>
+            </div>
+          </div>
           <a class="link-arrow" href="#pricing">Портфоліо</a>
         </article>
       </div>
