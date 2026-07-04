@@ -1587,91 +1587,157 @@ fieldset {
    ========================================================================== */
 
 .contacts {
-  padding: 4rem 0 3rem;
+  padding: 4rem 0 5rem;
 }
 
-.contacts__grid {
-  display: grid;
-  gap: 3rem;
-  align-items: center;
+.contacts__card {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2rem, 5vw, 4rem);
+  background:
+    radial-gradient(circle at 85% 15%, rgba(245, 197, 24, 0.14), transparent 45%),
+    var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
 }
 
-.contacts__list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  margin: 1.5rem 0 2rem;
+.contacts__watermark {
+  position: absolute;
+  right: -0.5rem;
+  bottom: -2.5rem;
+  z-index: 0;
+  font-size: clamp(7rem, 22vw, 15rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+  user-select: none;
 }
 
-.contacts__list li {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
+.contacts__head {
+  position: relative;
+  z-index: 1;
+  max-width: 32rem;
+  margin-bottom: 2.5rem;
 }
 
-.contacts__icon {
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.125rem;
-  background: var(--yellow-dim);
+.contacts__eyebrow {
+  margin: 0 0 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: var(--yellow);
-  border-radius: 50%;
 }
 
-.contacts__list strong {
-  display: block;
-  font-size: 0.875rem;
-  margin-bottom: 0.125rem;
+.contacts__title {
+  margin: 0 0 1rem;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
 }
 
-.contacts__list span,
-.contacts__list a {
-  font-size: 0.875rem;
+.contacts__lead {
+  margin: 0;
+  font-size: 1rem;
   color: var(--text-muted);
 }
 
-.contacts__list a:hover {
+.contacts__methods {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-method {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  padding: 1.25rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: border-color 0.25s var(--ease), transform 0.25s var(--ease);
+}
+
+.contact-method:hover {
+  border-color: var(--yellow);
+  transform: translateY(-3px);
+}
+
+.contact-method__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
   color: var(--yellow);
+  background: var(--yellow-dim);
+  border-radius: 12px;
+}
+
+.contact-method__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.contact-method__value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.contacts__actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
 }
 
 .contacts__social {
   display: flex;
-  gap: 1rem;
+  gap: 0.625rem;
 }
 
 .contacts__social a {
-  font-size: 0.8125rem;
-  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   color: var(--text-muted);
-  transition: color 0.2s;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-light);
+  border-radius: 50%;
+  transition: color 0.25s var(--ease), border-color 0.25s var(--ease), background 0.25s var(--ease);
 }
 
 .contacts__social a:hover {
-  color: var(--yellow);
+  color: var(--bg);
+  background: var(--yellow);
+  border-color: var(--yellow);
 }
 
-.contacts__brand {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.contacts__logo {
-  font-size: clamp(4rem, 15vw, 8rem);
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  color: var(--text);
-  line-height: 1;
-}
-
-.contacts__spark {
-  font-size: 2rem;
-  color: var(--yellow);
+@media (min-width: 640px) {
+  .contacts__methods {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .footer {
@@ -1698,10 +1764,6 @@ fieldset {
 }
 
 @media (min-width: 768px) {
-  .contacts__grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .footer__inner {
     flex-direction: row;
     justify-content: space-between;
