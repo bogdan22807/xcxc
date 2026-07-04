@@ -1587,15 +1587,15 @@ fieldset {
    ========================================================================== */
 
 .contacts {
-  padding: 4rem 0 5rem;
+  padding: 3.5rem 0 4rem;
 }
 
 .contacts__card {
   position: relative;
   overflow: hidden;
-  padding: clamp(2rem, 5vw, 4rem);
+  padding: clamp(1.75rem, 4vw, 3rem);
   background:
-    radial-gradient(circle at 85% 15%, rgba(245, 197, 24, 0.14), transparent 45%),
+    radial-gradient(circle at 90% 10%, rgba(245, 197, 24, 0.12), transparent 40%),
     var(--bg-card);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-xl);
@@ -1603,15 +1603,15 @@ fieldset {
 
 .contacts__watermark {
   position: absolute;
-  right: -0.5rem;
-  bottom: -2.5rem;
+  top: 0.5rem;
+  right: 1.5rem;
   z-index: 0;
-  font-size: clamp(7rem, 22vw, 15rem);
+  font-size: clamp(3.5rem, 9vw, 7rem);
   font-weight: 800;
   letter-spacing: 0.04em;
   line-height: 1;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.06);
   pointer-events: none;
   user-select: none;
 }
@@ -1620,7 +1620,7 @@ fieldset {
   position: relative;
   z-index: 1;
   max-width: 32rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .contacts__eyebrow {
@@ -1651,7 +1651,7 @@ fieldset {
   z-index: 1;
   display: grid;
   gap: 1rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .contact-method {
@@ -1732,6 +1732,12 @@ fieldset {
   color: var(--bg);
   background: var(--yellow);
   border-color: var(--yellow);
+}
+
+@media (max-width: 600px) {
+  .contacts__watermark {
+    display: none;
+  }
 }
 
 @media (min-width: 640px) {
