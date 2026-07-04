@@ -211,6 +211,10 @@ fieldset {
   font-size: 1.25rem;
   font-weight: 800;
   letter-spacing: 0.08em;
+  color: var(--text);
+}
+
+.logo-x {
   color: var(--yellow);
 }
 
@@ -1311,7 +1315,7 @@ fieldset {
   font-size: clamp(3rem, 10vw, 4.5rem);
   font-weight: 800;
   letter-spacing: 0.12em;
-  color: var(--yellow);
+  color: var(--text);
   text-shadow: 0 0 40px rgba(245, 197, 24, 0.3);
 }
 
@@ -1441,7 +1445,7 @@ fieldset {
   font-size: clamp(4rem, 15vw, 8rem);
   font-weight: 800;
   letter-spacing: 0.06em;
-  color: var(--yellow);
+  color: var(--text);
   line-height: 1;
 }
 
