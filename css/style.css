@@ -369,6 +369,10 @@ fieldset {
   text-transform: uppercase;
 }
 
+.hero__title-accent {
+  color: var(--yellow);
+}
+
 .hero__benefits {
   display: flex;
   flex-direction: column;
