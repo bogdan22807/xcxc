@@ -81,29 +81,45 @@
     if (current < steps.length - 1) showStep(current + 1);
   });
 
-  submitBtn.addEventListener("click", () => {
+  submitBtn.addEventListener("click", async () => {
     if (!validateStep(current)) return;
 
-    const siteType = quiz.querySelector('input[name="site-type"]:checked')?.value;
-    const budget = quiz.querySelector('input[name="budget"]:checked')?.value;
-    const wishes = quiz.querySelector('textarea[name="wishes"]')?.value;
-    const name = quiz.querySelector('input[name="name"]')?.value;
-    const phone = quiz.querySelector('input[name="phone"]')?.value;
-    const email = quiz.querySelector('input[name="email"]')?.value;
+    const payload = {
+      siteType: quiz.querySelector('input[name="site-type"]:checked')?.value,
+      budget: quiz.querySelector('input[name="budget"]:checked')?.value,
+      wishes: quiz.querySelector('textarea[name="wishes"]')?.value,
+      name: quiz.querySelector('input[name="name"]')?.value,
+      phone: quiz.querySelector('input[name="phone"]')?.value,
+      email: quiz.querySelector('input[name="email"]')?.value,
+    };
 
-    submitBtn.textContent = "Заявку надіслано!";
     submitBtn.disabled = true;
+    submitBtn.textContent = "Надсилаємо...";
 
-    console.info("XTRA quiz submission:", { siteType, budget, wishes, name, phone, email });
+    let ok = false;
+    try {
+      const res = await fetch("/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      ok = res.ok;
+    } catch (err) {
+      ok = false;
+    }
+
+    submitBtn.textContent = ok ? "Заявку надіслано!" : "Помилка, спробуйте ще";
 
     setTimeout(() => {
-      quiz.querySelectorAll("input, textarea").forEach((el) => {
-        if (el.type === "radio") el.checked = false;
-        else el.value = "";
-      });
+      if (ok) {
+        quiz.querySelectorAll("input, textarea").forEach((el) => {
+          if (el.type === "radio") el.checked = false;
+          else el.value = "";
+        });
+        showStep(0);
+      }
       submitBtn.textContent = "Отримати розрахунок";
       submitBtn.disabled = false;
-      showStep(0);
     }, 3000);
   });
 
