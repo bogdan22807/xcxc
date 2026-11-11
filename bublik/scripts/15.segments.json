@@ -1,0 +1,32 @@
+{
+  "episode": 15,
+  "title": "Морковка",
+  "fps": 24,
+  "hook": "НОЧНОЕ ЗРЕНИЕ\nЭТО ВРАНЬЁ",
+  "caption": "Морковь не включает ночное зрение. В 1940-м так прикрывали бортовой радар — это сказал сам пилот Каннингем. Лишняя морковь глазам ничего не прибавляет.\n\nА ты до сих пор в это верил?",
+  "pinned": "Напиши «верил» или «не верил». Отправь тому, кто ест морковку перед ночной дорогой.",
+  "lines": [
+    {"id": "01", "speaker": "bublik", "text": "Морковь не даёт ночное зрение.", "scene": "shock", "sfx": "sting"},
+    {"id": "02", "speaker": "bublik", "text": "Байку придумали, чтобы спрятать радар.", "scene": "radar_reveal", "sfx": "radar"},
+    {"id": "03", "speaker": "ponchik", "text": "Бабушка клялась: съешь — увидишь в темноте.", "scene": "grandma", "mid": "dark_bite", "sfx": "none", "sfx_mid": "crunch"},
+    {"id": "04", "speaker": "bublik", "text": "В сороковом ночью сбивали бомбардировщики.", "scene": "raid", "mid": "lock", "sfx": "plane"},
+    {"id": "05", "speaker": "bublik", "text": "Секрет был на борту. Это радар.", "scene": "scope", "sfx": "scope"},
+    {"id": "06", "speaker": "bublik", "text": "Пилота прозвали Кошачьи глаза.", "scene": "catseyes", "sfx": "flash"},
+    {"id": "07", "speaker": "bublik", "text": "Газетам сказали: он ест гору моркови.", "scene": "papers", "mid": "pile", "sfx": "paper", "sfx_mid": "thud"},
+    {"id": "08", "speaker": "bublik", "text": "Сам лётчик сказал: так прятали радар.", "scene": "pilot", "sfx": "mic"},
+    {"id": "09", "speaker": "ponchik", "text": "И все побежали сажать грядки.", "scene": "garden", "sfx": "steps"},
+    {"id": "10", "speaker": "bublik", "text": "На плакатах писали: морковь для зорких глаз.", "scene": "poster", "sfx": "slap"},
+    {"id": "11", "speaker": "bublik", "text": "Полки пустели. Про радар молчали.", "scene": "shelves", "mid": "curtain", "sfx": "thud", "sfx_mid": "radar"},
+    {"id": "12", "speaker": "bublik", "text": "В моркови есть бета-каротин.", "scene": "beta", "sfx": "chop"},
+    {"id": "13", "speaker": "bublik", "text": "Тело делает из него витамин А.", "scene": "vitamin", "sfx": "sparkle"},
+    {"id": "14", "speaker": "bublik", "text": "Сетчатке он нужен, чтобы ловить свет.", "scene": "retina", "sfx": "shimmer"},
+    {"id": "15", "speaker": "bublik", "text": "Мало витамина — ночью видно хуже.", "scene": "dim", "sfx": "dim"},
+    {"id": "16", "speaker": "bublik", "text": "Сверхзрения морковь не даёт.", "scene": "nosuper", "sfx": "deny"},
+    {"id": "17", "speaker": "ponchik", "text": "Съел пучок — ладони стали оранжевые.", "scene": "palms", "sfx": "munch"},
+    {"id": "18", "speaker": "bublik", "text": "Краска садится в кожу. Это каротинемия.", "scene": "skin", "mid": "label", "sfx": "squish"},
+    {"id": "19", "speaker": "bublik", "text": "Лишняя морковь глазам ничего не даёт.", "scene": "eyesame", "sfx": "pop"},
+    {"id": "20", "speaker": "bublik", "text": "Проверь: съешь морковь и выключи свет.", "scene": "switch", "sfx": "switch"},
+    {"id": "21", "speaker": "bublik", "text": "Темнота останется темнотой.", "scene": "dark", "sfx": "dark"},
+    {"id": "22", "speaker": "bublik", "text": "Отправь тому, кто жуёт морковку за рулём ночью.", "scene": "send", "mid": "car", "sfx": "whoosh", "sfx_mid": "car"}
+  ]
+}
